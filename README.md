@@ -6,7 +6,7 @@ RAGNAROK BARBER es un proyecto personal de desarrollo web frontend, creado como 
 
 El proyecto busca desarrollar una experiencia visual elegante y moderna, con una identidad estética oscura, detalles dorados y elementos geométricos inspirados en la cultura nórdica.
 
-**Demo online:** https://ragnarokproyect.netlify.app/
+**Demo online:** [https://ragnarokproyect.netlify.app/](https://ragnarokproyect.netlify.app/)
 
 ## Características implementadas
 
@@ -45,13 +45,11 @@ ragnarok-barber/
 │       └── main.js
 ├── index.html
 ├── package.json
-├── vite.config.js
 ├── package-lock.json
+├── vite.config.js
 ├── .gitignore
 └── README.md
 ```
-
-`package-lock.json` se incorpora después de generar el archivo mediante npm.
 
 ## Requisitos
 
@@ -91,7 +89,7 @@ Quedan pendientes algunas mejoras:
 
 - Integración de un sistema de reservas funcional.
 - Conexión de los botones de contacto con WhatsApp.
-- Definición de una ubicación demostrativa e integración futura con un servicio de mapas.
+- Integración de un mapa real y confirmación de la ubicación definitiva.
 - Implementación del footer.
 - Incorporación de fotografías reales y contenido visual adicional.
 
@@ -99,7 +97,7 @@ Quedan pendientes algunas mejoras:
 
 La demostración del proyecto se encuentra alojada en Netlify:
 
-https://ragnarokproyect.netlify.app/
+[https://ragnarokproyect.netlify.app/](https://ragnarokproyect.netlify.app/)
 
 El repositorio de GitHub contiene el código fuente del proyecto. Su publicación en GitHub es independiente del alojamiento actual en Netlify.
 
