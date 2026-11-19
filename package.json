@@ -1,0 +1,18 @@
+{
+  "name": "ragnarok-barber",
+  "version": "0.1.0",
+  "description": "Sitio web premium para RAGNAROK BARBER — barbería contemporánea.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.4.6"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

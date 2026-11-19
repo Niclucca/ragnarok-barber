@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+
+# Archivos generados por Vite
+dist/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editores
+.vscode/
+.idea/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Netlify local
+.netlify/
+
+# Certificados y claves privadas
+*.pem
+*.p12
+*.pfx
+*.key

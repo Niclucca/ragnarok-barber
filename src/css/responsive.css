@@ -1,0 +1,244 @@
+/* ==========================================================================
+   RAGNAROK BARBER — Estilos responsive
+   Mobile-first: los breakpoints se irán completando a medida que
+   se implemente cada sección.
+   ========================================================================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero__actions {
+    flex-direction: row;
+  }
+
+  .hero__mark {
+    width: 480px;
+    height: 480px;
+    top: 4%;
+    right: -14%;
+  }
+
+  .hero__mark-detail {
+    display: block;
+    opacity: 0.7;
+  }
+
+  .hero__mark-detail polygon,
+  .hero__mark-detail line {
+    stroke-width: 1;
+  }
+
+  .hero__mark-shape-a {
+    stroke: var(--color-gold);
+    opacity: 0.22;
+  }
+
+  .hero__mark-shape-b {
+    stroke: var(--color-gold-soft);
+    opacity: 0.18;
+  }
+
+  .hero__mark-tick {
+    stroke: var(--color-gold-soft);
+    opacity: 0.3;
+  }
+
+  .standard {
+    padding-block: 6.5rem;
+  }
+
+  .standard__visual {
+    max-width: 420px;
+  }
+
+  .services {
+    padding-block: 6.5rem;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .hours {
+    padding-block: 6.5rem;
+  }
+
+  .hours__item {
+    padding-block: 1.75rem;
+  }
+
+  .location {
+    padding-block: 5rem;
+  }
+
+  .location__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .booking {
+    padding-block: 6.5rem;
+  }
+
+  .booking__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+/* Desktop: navbar completa, se oculta el toggle mobile */
+@media (min-width: 1024px) {
+  .navbar__nav {
+    display: block;
+  }
+
+  .navbar__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold-soft);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color var(--transition-fast),
+      color var(--transition-fast);
+  }
+
+  .navbar__cta:hover,
+  .navbar__cta:focus-visible {
+    background-color: var(--color-gold);
+    color: var(--color-obsidian);
+  }
+
+  .navbar__toggle,
+  .mobile-menu {
+    display: none;
+  }
+
+  .hero__content {
+    gap: 1.25rem;
+  }
+
+  .hero__description {
+    font-size: 1.05rem;
+  }
+
+  .hero__mark {
+    width: 680px;
+    height: 680px;
+    top: calc(50% - 340px);
+    right: -4%;
+  }
+
+  /* Ligero refuerzo de presencia en desktop: la marca sigue siendo
+     un elemento secundario, pero gana algo más de peso visual para
+     equilibrar el lado derecho de la composición. */
+  .hero__mark-core circle {
+    stroke-width: 1.25;
+    opacity: 0.48;
+  }
+
+  .hero__mark-core circle:last-child {
+    opacity: 0.34;
+  }
+
+  .hero__mark-shape-a {
+    opacity: 0.3;
+  }
+
+  .hero__mark-shape-b {
+    opacity: 0.24;
+  }
+
+  .hero__mark-tick {
+    opacity: 0.4;
+  }
+
+  .standard__inner {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .standard__visual {
+    max-width: none;
+  }
+
+  .standard__content {
+    gap: 1.75rem;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .hours__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+    gap: 3rem;
+  }
+
+  .hours__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.85rem;
+    padding-block: 0;
+    border-top: none;
+  }
+
+  .hours__item:last-child {
+    border-bottom: none;
+  }
+
+  .hours__item + .hours__item {
+    border-inline-start: 1px solid rgba(167, 167, 167, 0.15);
+  }
+
+  .hours__item-line {
+    flex: none;
+    width: 32px;
+  }
+
+  .hours__item-time {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  .location__inner {
+    gap: 4rem;
+  }
+
+  .booking__inner {
+    gap: 4rem;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1440px) {
+  .hero__content {
+    gap: 1.5rem;
+  }
+
+  .hero__mark {
+    width: 780px;
+    height: 780px;
+    top: calc(50% - 390px);
+    right: 4%;
+  }
+
+  .standard__inner {
+    grid-template-columns: 4fr 6fr;
+    gap: 5rem;
+  }
+}

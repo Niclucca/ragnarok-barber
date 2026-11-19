@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAGNAROK BARBER | Barbería Premium en Montevideo</title>
+    <meta
+      name="description"
+      content="RAGNAROK BARBER — Barbería contemporánea en Montevideo. Cortes de precisión, fades, barba y reservas online."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: preconnect para reducir latencia de conexión -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      Pesos cargados (mínimos necesarios según especificación):
+      Cormorant Garamond 400/500/600 -> logo, títulos, elementos editoriales
+      Inter 400/500/600/700 -> navegación, botones, formularios, precios, UI
+    -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Preloader: intro breve antes de revelar el Hero -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <span class="preloader__mark">RAGNAROK</span>
+    </div>
+
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a href="#hero" class="navbar__logo">RAGNAROK</a>
+
+        <nav class="navbar__nav" aria-label="Navegación principal">
+          <ul class="navbar__links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </nav>
+
+        <a href="#reservar" class="navbar__cta">Reservar turno</a>
+
+        <button
+          class="navbar__toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </button>
+      </div>
+
+      <!-- Menú mobile de pantalla completa -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu__links">
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+        <a href="#reservar" class="mobile-menu__cta">Reservar turno</a>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="hero" id="hero">
+        <div class="hero__background" aria-hidden="true">
+          <!--
+            Marca geométrica abstracta, decorativa. Dos círculos
+            superpuestos (grupo "core", visible en todos los tamaños)
+            más triángulos y trazos irregulares (grupo "detail",
+            visible desde tablet) que sugieren precisión y geometría
+            nórdica sin usar runas ni símbolos literales.
+          -->
+          <svg
+            class="hero__mark"
+            viewBox="0 0 600 600"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+          >
+            <g class="hero__mark-core">
+              <circle cx="300" cy="300" r="210" />
+              <circle cx="392" cy="222" r="118" />
+            </g>
+            <g class="hero__mark-detail">
+              <polygon class="hero__mark-shape-a" points="300,58 522,414 132,476" />
+              <polygon class="hero__mark-shape-b" points="416,74 558,296 380,338" />
+              <line class="hero__mark-tick" x1="470" y1="118" x2="512" y2="70" />
+              <line class="hero__mark-tick" x1="118" y1="360" x2="150" y2="410" />
+              <line class="hero__mark-tick" x1="330" y1="512" x2="368" y2="548" />
+            </g>
+          </svg>
+
+          <div class="hero__glow"></div>
+        </div>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">Est. 2026</p>
+          <h1 class="hero__title">RAGNAROK</h1>
+          <p class="hero__subtitle">Forged for your style</p>
+          <p class="hero__description">
+            Barbería contemporánea. Cortes de precisión. Estilo sin
+            concesiones.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#reservar" class="btn btn--primary">Reservar turno</a>
+            <a href="#services" class="btn btn--secondary"
+              >Descubrir servicios</a
+            >
+          </div>
+        </div>
+
+        <a href="#nosotros" class="hero__scroll">
+          <span>Scroll to explore</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section class="standard" id="nosotros" aria-labelledby="standardTitle">
+        <div class="container standard__inner">
+          <!--
+            Elemento visual provisional (100% CSS/SVG): marco editorial
+            con detalles de esquina y un anillo decorativo, reutilizando
+            el lenguaje geométrico del Hero. Fácil de reemplazar por una
+            fotografía real más adelante (ver README).
+          -->
+          <div class="standard__visual" aria-hidden="true">
+            <div class="standard__frame">
+              <span class="standard__corner standard__corner--tl"></span>
+              <span class="standard__corner standard__corner--tr"></span>
+              <span class="standard__corner standard__corner--bl"></span>
+              <span class="standard__corner standard__corner--br"></span>
+              <span class="standard__ring"></span>
+            </div>
+          </div>
+
+          <div class="standard__content">
+            <p class="standard__eyebrow reveal">
+              <span class="standard__eyebrow-line" aria-hidden="true"></span>
+              The Ragnarok Standard
+            </p>
+
+            <h2
+              class="standard__title reveal"
+              id="standardTitle"
+              data-reveal-delay="100"
+            >
+              Crafted with character.
+            </h2>
+
+            <p class="standard__text reveal" data-reveal-delay="200">
+              En RAGNAROK entendemos la barbería como precisión, carácter y
+              estilo. Cada detalle importa: desde el corte hasta el último
+              acabado.
+            </p>
+
+            <ul class="standard__pillars">
+              <li class="standard__pillar reveal" data-reveal-delay="300">
+                <span class="standard__pillar-number">01</span>
+                <span class="standard__pillar-divider" aria-hidden="true"></span>
+                <div class="standard__pillar-body">
+                  <h3 class="standard__pillar-title">Precisión</h3>
+                  <p class="standard__pillar-description">
+                    Cada corte pensado para tu estilo.
+                  </p>
+                </div>
+              </li>
+
+              <li class="standard__pillar reveal" data-reveal-delay="420">
+                <span class="standard__pillar-number">02</span>
+                <span class="standard__pillar-divider" aria-hidden="true"></span>
+                <div class="standard__pillar-body">
+                  <h3 class="standard__pillar-title">Carácter</h3>
+                  <p class="standard__pillar-description">
+                    Una identidad que se nota.
+                  </p>
+                </div>
+              </li>
+
+              <li class="standard__pillar reveal" data-reveal-delay="540">
+                <span class="standard__pillar-number">03</span>
+                <span class="standard__pillar-divider" aria-hidden="true"></span>
+                <div class="standard__pillar-body">
+                  <h3 class="standard__pillar-title">Experiencia</h3>
+                  <p class="standard__pillar-description">
+                    Un servicio creado para disfrutar.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="servicesTitle">
+        <div class="container">
+          <div class="services__header">
+            <p class="services__eyebrow reveal">
+              <span class="services__eyebrow-line" aria-hidden="true"></span>
+              Nuestros servicios
+            </p>
+
+            <h2
+              class="services__title reveal"
+              id="servicesTitle"
+              data-reveal-delay="100"
+            >
+              Servicios para tu mejor versión
+            </h2>
+
+            <p class="services__subtitle reveal" data-reveal-delay="200">
+              Cortes y servicios de barbería profesionales, pensados para
+              cada estilo.
+            </p>
+          </div>
+
+          <div class="services__grid">
+            <article class="service-card reveal" data-reveal-delay="0">
+              <span class="service-card__index" aria-hidden="true">01</span>
+              <h3 class="service-card__name">Corte Clásico</h3>
+              <p class="service-card__description">
+                Corte personalizado según tu estilo y tipo de cabello.
+              </p>
+              <div class="service-card__meta">
+                <span class="service-card__price">$650</span>
+                <span class="service-card__duration">45 min</span>
+              </div>
+              <a href="#contacto" class="service-card__cta"
+                >Reservar este servicio</a
+              >
+            </article>
+
+            <article class="service-card reveal" data-reveal-delay="80">
+              <span class="service-card__index" aria-hidden="true">02</span>
+              <h3 class="service-card__name">Corte + Barba</h3>
+              <p class="service-card__description">
+                Corte completo acompañado de perfilado y arreglo de barba.
+              </p>
+              <div class="service-card__meta">
+                <span class="service-card__price">$900</span>
+                <span class="service-card__duration">60 min</span>
+              </div>
+              <a href="#contacto" class="service-card__cta"
+                >Reservar este servicio</a
+              >
+            </article>
+
+            <article class="service-card reveal" data-reveal-delay="160">
+              <span class="service-card__index" aria-hidden="true">03</span>
+              <h3 class="service-card__name">Barba</h3>
+              <p class="service-card__description">
+                Perfilado, definición y cuidado de la barba.
+              </p>
+              <div class="service-card__meta">
+                <span class="service-card__price">$450</span>
+                <span class="service-card__duration">30 min</span>
+              </div>
+              <a href="#contacto" class="service-card__cta"
+                >Reservar este servicio</a
+              >
+            </article>
+
+            <article class="service-card reveal" data-reveal-delay="240">
+              <span class="service-card__index" aria-hidden="true">04</span>
+              <h3 class="service-card__name">Fade</h3>
+              <p class="service-card__description">
+                Degradado preciso y personalizado con terminación
+                profesional.
+              </p>
+              <div class="service-card__meta">
+                <span class="service-card__price">$750</span>
+                <span class="service-card__duration">50 min</span>
+              </div>
+              <a href="#contacto" class="service-card__cta"
+                >Reservar este servicio</a
+              >
+            </article>
+
+            <article class="service-card reveal" data-reveal-delay="320">
+              <span class="service-card__index" aria-hidden="true">05</span>
+              <h3 class="service-card__name">Corte Infantil</h3>
+              <p class="service-card__description">
+                Corte pensado para niños, cómodo y adaptado a su estilo.
+              </p>
+              <div class="service-card__meta">
+                <span class="service-card__price">$500</span>
+                <span class="service-card__duration">40 min</span>
+              </div>
+              <a href="#contacto" class="service-card__cta"
+                >Reservar este servicio</a
+              >
+            </article>
+
+            <article class="service-card reveal" data-reveal-delay="400">
+              <span class="service-card__index" aria-hidden="true">06</span>
+              <h3 class="service-card__name">Premium</h3>
+              <p class="service-card__description">
+                La experiencia completa: corte, barba, lavado y
+                terminación.
+              </p>
+              <div class="service-card__meta">
+                <span class="service-card__price">$1.100</span>
+                <span class="service-card__duration">75 min</span>
+              </div>
+              <a href="#contacto" class="service-card__cta"
+                >Reservar este servicio</a
+              >
+            </article>
+          </div>
+
+          <div class="services__cta reveal" data-reveal-delay="150">
+            <p class="services__cta-text">¿Listo para tu próximo corte?</p>
+            <a href="#contacto" class="btn btn--primary">Reservar turno</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hours" id="horarios" aria-labelledby="hoursTitle">
+        <div class="container">
+          <div class="hours__header">
+            <p class="hours__eyebrow reveal">
+              <span class="hours__eyebrow-line" aria-hidden="true"></span>
+              Horarios
+            </p>
+
+            <h2
+              class="hours__title reveal"
+              id="hoursTitle"
+              data-reveal-delay="100"
+            >
+              Estamos para vos
+            </h2>
+
+            <p class="hours__subtitle reveal" data-reveal-delay="200">
+              Elegí el momento que mejor te quede: te esperamos con la misma
+              dedicación de siempre.
+            </p>
+          </div>
+
+          <div class="hours__grid">
+            <div class="hours__item reveal" data-reveal-delay="0">
+              <span class="hours__dot" aria-hidden="true"></span>
+              <span class="hours__item-label">Lunes a viernes</span>
+              <span class="hours__item-line" aria-hidden="true"></span>
+              <span class="hours__item-time">09:00 — 18:00</span>
+            </div>
+
+            <div class="hours__item reveal" data-reveal-delay="120">
+              <span class="hours__dot" aria-hidden="true"></span>
+              <span class="hours__item-label">Sábados</span>
+              <span class="hours__item-line" aria-hidden="true"></span>
+              <span class="hours__item-time">10:00 — 14:00</span>
+            </div>
+
+            <div
+              class="hours__item hours__item--closed reveal"
+              data-reveal-delay="240"
+            >
+              <span class="hours__dot hours__dot--closed" aria-hidden="true"></span>
+              <span class="hours__item-label">Domingos</span>
+              <span class="hours__item-line" aria-hidden="true"></span>
+              <span class="hours__item-time">Cerrado</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location" id="ubicacion" aria-labelledby="locationTitle">
+        <div class="container location__inner">
+          <div class="location__content">
+            <p class="location__eyebrow reveal">
+              <span class="location__eyebrow-line" aria-hidden="true"></span>
+              Ubicación
+            </p>
+
+            <h2
+              class="location__title reveal"
+              id="locationTitle"
+              data-reveal-delay="100"
+            >
+              Encontranos
+            </h2>
+
+            <p class="location__text reveal" data-reveal-delay="200">
+              Todavía estamos definiendo nuestra dirección exacta. Por
+              ahora, podés ubicarnos en:
+            </p>
+
+            <!--
+              Contenido de dirección provisional y fácil de editar:
+              reemplazar "location__address-value" y
+              "location__address-note" cuando tengamos la dirección
+              real (y, en ese momento, conectar el botón con Google
+              Maps).
+            -->
+            <div class="location__address reveal" data-reveal-delay="260">
+              <span class="location__address-label">Nuestra ubicación</span>
+              <p class="location__address-value">Montevideo, Uruguay</p>
+              <p class="location__address-note">
+                Próximamente agregaremos la dirección exacta.
+              </p>
+            </div>
+
+            <a
+              href="#ubicacion"
+              class="btn btn--primary reveal"
+              data-reveal-delay="320"
+              >Ver ubicación</a
+            >
+          </div>
+
+          <div class="location__map reveal" data-reveal-delay="200">
+            <div class="location__map-pattern" aria-hidden="true"></div>
+
+            <div class="location__map-marker">
+              <svg
+                class="location__map-pin"
+                viewBox="0 0 24 32"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 8.5 12 20 12 20s12-11.5 12-20C24 5.373 18.627 0 12 0z"
+                />
+                <circle class="location__map-pin-dot" cx="12" cy="12" r="4.5" />
+              </svg>
+              <p class="location__map-label">Ubicación próximamente</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking" id="reservar" aria-labelledby="bookingTitle">
+        <div class="container booking__inner">
+          <div class="booking__content">
+            <p class="booking__eyebrow reveal">
+              <span class="booking__eyebrow-line" aria-hidden="true"></span>
+              Reservas
+            </p>
+
+            <h2
+              class="booking__title reveal"
+              id="bookingTitle"
+              data-reveal-delay="100"
+            >
+              Reservá tu próximo corte
+            </h2>
+
+            <p class="booking__text reveal" data-reveal-delay="200">
+              Elegí el día y horario que mejor te quede y ponete en
+              contacto con nosotros para confirmar tu turno.
+            </p>
+
+            <ul class="booking__list reveal" data-reveal-delay="300">
+              <li class="booking__list-item">
+                <span class="booking__list-dot" aria-hidden="true"></span>
+                Atención personalizada
+              </li>
+              <li class="booking__list-item">
+                <span class="booking__list-dot" aria-hidden="true"></span>
+                Horarios flexibles
+              </li>
+              <li class="booking__list-item">
+                <span class="booking__list-dot" aria-hidden="true"></span>
+                Confirmación directa
+              </li>
+            </ul>
+          </div>
+
+          <!--
+            Tarjeta de contacto provisional: todavía no tenemos número
+            de WhatsApp real. Cuando lo tengamos, reemplazar el
+            "href" del botón principal por el enlace de WhatsApp
+            (ej. https://wa.me/598...) y quitar la nota de abajo.
+          -->
+          <div class="booking__card reveal" data-reveal-delay="200">
+            <h3 class="booking__card-title">¿Querés reservar?</h3>
+            <p class="booking__card-text">
+              Escribinos y coordinamos tu turno.
+            </p>
+
+            <a href="#reservar" class="btn btn--primary">
+              Reservar por WhatsApp
+            </a>
+            <p class="booking__card-note">
+              WhatsApp próximamente disponible
+            </p>
+
+            <a href="#ubicacion" class="btn btn--secondary">
+              Contactarnos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        La sección Footer se implementará en una etapa posterior.
+      -->
+    </main>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
